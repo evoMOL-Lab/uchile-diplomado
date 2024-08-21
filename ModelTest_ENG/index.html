@@ -119,7 +119,7 @@
 <h2 id="introduction">Introduction</h2>
 <p>The objective of this tutorial is to show the different ways to evaluate and estimate a nucleotide (and amino acid) replacement model suitable for your <em>dataset</em> for later phylogenetic analysis.</p>
 <p>As highlighted during the course, the step of estimating a replacement model is not necessarily mandatory in any phylogenetic analysis. When the working sequences and the characteristics of the obtained alignment are well known, the researcher can directly choose a single mathematical model. However, as there are numerous models available, such a choice can be challenging for beginners. In the worst case, ignorance can lead to the choice of a model that underestimates important alignment characteristics, leading to less accurate estimates. On the other hand, including many parameters increases the variance and consequently the accuracy of the analyses (and, sometimes, can also increase computational power requirements).</p>
-<p>Most tools use the statistical principle of likelihood (<em>L</em>). To do this, they calculate <em>L</em> for all available models and then make a hierarchical classification (using or not information criteria). These calculations are computationally intensive even for many current PCs.</p>
+<p>Most tools use the statistical principle of likelihood (<em>L</em>). To do this, they calculate <em>L</em> for all available models and then make a hierarchical classification (using or not information criteria). Depending on the size of your dataset, these calculations can be computationally intensive even for many current PCs.</p>
 <h2 id="using-mega-x">Using MEGA X</h2>
 <p>In its first version, the program <a href="www.megasoftware.net">MEGA</a> did not have a routine for testing the substitution model. Even so, it was one of the first phylogenetic programs to include this functionality natively. The algorithm is fast. However, it tests more models than are available in the tool itself.</p>
 <ul>
@@ -297,6 +297,8 @@
 </ul>
 <p><img alt="ModelTest-NG protein" src="../MTENG-fig23.png" /></p>
 <h2 id="final-remarks">Final remarks</h2>
+<p><strong><em>Where do I find more information about the substitution models?</em></strong></p>
+<p>The Github from the ModelTest project has a page describing all the models used in the program with their respectives references. It is interesting to know the authors' motivation/application for the created substitution model. Here is the page: <a href="https://github.com/ddarriba/modeltest/wiki/Models-of-Evolution">https://github.com/ddarriba/modeltest/wiki/Models-of-Evolution</a>.</p>
 <p><strong><em>What criteria do I use to choose the replacement model?</em></strong></p>
 <p>That is not a trivial question. For Bayesian inferences, the BIC criterion tends to be more appropriate. AICc is more suitable for small <em>datasets</em> than AIC (no correction), however, the two tend to converge on more massive <em>datasets</em>, so we always recommend using AICc. The DT criterion (<em>decision theory</em>) should be used with caution, as the jModelTest manual itself recommends. Thus, AICc and BIC are the most reliable criteria. When they converge (and this often happens), the problem is solved. Even without convergence, you will be safe if you do phylogenetic analysis with both the model chosen by AICc and the one chosen by BIC.</p>
 <p><strong><em>The chosen model does not exist in the tool I will use</em></strong></p>

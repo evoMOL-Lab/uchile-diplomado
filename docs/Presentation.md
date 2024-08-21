@@ -1,4 +1,4 @@
-![Biome](BioME.png)
+![Biome](UC-fig1.png)
 
 ![UChile](UChile.png)
 

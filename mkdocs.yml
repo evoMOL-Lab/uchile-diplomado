@@ -7,7 +7,6 @@ nav:
   - Home: Presentation.md
   - About Us: aboutus.md
   - Diplomado - UChile: 
-    - Home: Presentation.md
     - Slides: UC_slides.md
     - Files and References: Material.md
     - First Tutorial: First_Tutorial_ENG.md

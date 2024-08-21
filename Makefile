@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-GH_PAGE := evomol-lab.github.io/uchile-diplomado/
+GH_PAGE := evomol-lab.github.io/uchile-diplomado
 
 .PHONY: deploy
 deploy:

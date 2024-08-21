@@ -6,7 +6,7 @@ The objective of this tutorial is to show the different ways to evaluate and est
 
 As highlighted during the course, the step of estimating a replacement model is not necessarily mandatory in any phylogenetic analysis. When the working sequences and the characteristics of the obtained alignment are well known, the researcher can directly choose a single mathematical model. However, as there are numerous models available, such a choice can be challenging for beginners. In the worst case, ignorance can lead to the choice of a model that underestimates important alignment characteristics, leading to less accurate estimates. On the other hand, including many parameters increases the variance and consequently the accuracy of the analyses (and, sometimes, can also increase computational power requirements).
 
-Most tools use the statistical principle of likelihood (*L*). To do this, they calculate *L* for all available models and then make a hierarchical classification (using or not information criteria). These calculations are computationally intensive even for many current PCs.
+Most tools use the statistical principle of likelihood (*L*). To do this, they calculate *L* for all available models and then make a hierarchical classification (using or not information criteria). Depending on the size of your dataset, these calculations can be computationally intensive even for many current PCs.
 
 ## Using MEGA X
 
@@ -191,6 +191,10 @@ For this we will use the same file used previously: [vert-aligned.fasta](https:/
 ![ModelTest-NG protein](MTENG-fig23.png)
 
 ## Final remarks
+
+***Where do I find more information about the substitution models?***
+
+The Github from the ModelTest project has a page describing all the models used in the program with their respectives references. It is interesting to know the authors' motivation/application for the created substitution model. Here is the page: [https://github.com/ddarriba/modeltest/wiki/Models-of-Evolution](https://github.com/ddarriba/modeltest/wiki/Models-of-Evolution).
 
 ***What criteria do I use to choose the replacement model?***
 

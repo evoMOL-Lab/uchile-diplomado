@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="jpmslima" /><link rel="canonical" href="https://evomol-lab.github.io/uchile-diplomado/IQTree/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Using IQ-Tree - UChile - Modulo Comparative Genomics</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Using IQ-Tree";
+        var mkdocs_page_input_path = "IQTree.md";
+        var mkdocs_page_url = "/uchile-diplomado/IQTree/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> UChile - Modulo Comparative Genomics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Presentation/">Página Inicial</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../aboutus.md">Sobre o grupo</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Diplomado - UChile</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Presentation/">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UC_slides/">Slides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Material/">Files and References</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../First_Tutorial_ENG/">First Tutorial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Substitution_saturation_ENG/">Analysis of Substitution Saturation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ModelTest_ENG/">Test of the Best-Fit Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MEGAX_ENG/">Using MEGAX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1st_BEAST/">Using BEAST</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BEAST%2BEBSP_ENG/">Phylodynamics using EBSP</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Using IQ-Tree</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-tutorial">The Tutorial</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">UChile - Modulo Comparative Genomics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Diplomado - UChile</li>
+      <li class="breadcrumb-item active">Using IQ-Tree</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-iq-tree">Using IQ-Tree</h1>
+<h2 id="introduction">Introduction</h2>
+<p><a href="http://www.iqtree.org/">IQ-TREE</a> is relatively recent (2014) open-source software package for phylogenetic inference using the maximum likelihood (ML) criterion. It has a very good performance when compared with other popular ML phylogenetics software such as RAxML and PhyML, and it has been playing a vital role as an integral component for many platforms such as Nextstrain (Minh et al. 2020). According to this latter publication:</p>
+<blockquote>
+<p><em>The high performance of IQ-TREE results from the efficient integration of novel phylogenetic methods that improve the three key steps in phylogenetic analysis: fast model selection via ModelFinder, an effective tree search algorithm, and a novel ultrafast bootstrap approximation.</em></p>
+</blockquote>
+<p>IQ-Tree is also good for phylogenomics analyzes, since it t also finds the best-fit partitioning scheme for your dataset, allowing complex models for mixed data types, mixed rate heterogeneity types, linked or unlinked branch lengths. In addition, its fast Maximum Likelihood and bootstraps implementations make this application a must have in phylogenetics hypothesis testing.</p>
+<h2 id="the-tutorial">The Tutorial</h2>
+<p>The IQ-Tree site has a very good beginner tutorial, which we are going to use on this course. The tutorial can accessed by the following link:</p>
+<p><a href="http://www.iqtree.org/workshop/sydney2022">http://www.iqtree.org/workshop/sydney2022</a></p>
+<p>We can also use the Web Server tutorial described by the following link:</p>
+<p><a href="http://www.iqtree.org/workshop/sydney2022">http://www.iqtree.org/doc/Web-Server-Tutorial</a></p>
+<h2 id="documentation">Documentation</h2>
+<p>IQ-Tree has a very thoroughly manual, which describes how to perform since simple tasks, like changing sequence formats, to apply complex models to phylogenomics datasets. Please find bellow the direct link for the IQ-Tree manual:</p>
+<p>-<a href="http://www.iqtree.org/doc/iqtree-doc.pdf">http://www.iqtree.org/doc/iqtree-doc.pdf</a></p>
+<p>IQ-TREE has an extensive documentation with several tutorials and manual (copied from IQ-Tree website):</p>
+<ul>
+<li>
+<p><a href="http://www.iqtree.org/doc/Quickstart">Getting started guide:</a> recommended for users who just downloaded IQ-TREE.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Web-Server-Tutorial">Web Server Tutorial:</a> A quick starting guide for the IQ-TREE Web Server.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Tutorial">Beginner's tutorial:</a> recommended for users starting to use IQ-TREE.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Advanced-Tutorial">Advanced tutorial:</a> recommended for more experienced users who want to explore more features of IQ-TREE.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Command-Reference">Command Reference:</a> Comprehensive documentation of command-line options available in IQ-TREE.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Substitution-Models">Substitution Models:</a> All common substitution models and usages.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Complex-Models">Complex Models:</a> Complex models such as partition and mixture models.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Polymorphism-Aware-Models">Polymorphism Aware Models:</a> Polymorphism-aware phylogenetic Models (PoMo) related documentation.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Compilation-Guide">Compilation guide:</a> for advanced users who wants to compile IQ-TREE from source code.</p>
+</li>
+<li>
+<p><a href="http://www.iqtree.org/doc/Frequently-Asked-Questions">Frequently asked questions (FAQ):</a> recommended to have a look before you post a question in the IQ-TREE group.</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../BEAST%2BEBSP_ENG/" class="btn btn-neutral float-left" title="Phylodynamics using EBSP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../BEAST%2BEBSP_ENG/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

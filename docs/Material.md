@@ -47,7 +47,7 @@
 - [Aliview](http://www.ormbunkar.se/aliview/)
 - [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
 - [Jalview](http://www.jalview.org)
-- [TrimAL](http://trimal.cgenomics.org)
+- [TrimAL](http://trimal.cgenomics.org) / [TrimAL](https://github.com/inab/trimal) / [TrimAL](https://vicfero.github.io/trimal/)
 
 ## *Online* Tools
 

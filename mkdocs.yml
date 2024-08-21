@@ -1,0 +1,25 @@
+site_name: UChile - Modulo Comparative Genomics
+site_url: https://evomol-lab.github.io/uchile-diplomado/
+site_author: jpmslima
+site_description: Material for the Comparative Genomics module of the UChile Diplomado in Bioinformatics
+
+nav:
+  - Página Inicial: Presentation.md
+  - Sobre o grupo: aboutus.md
+  - Diplomado - UChile: 
+    - Home: Presentation.md
+    - Slides: UC_slides.md
+    - Files and References: Material.md
+    - First Tutorial: First_Tutorial_ENG.md
+    - Analysis of Substitution Saturation: Substitution_saturation_ENG.md
+    - Test of the Best-Fit Models: ModelTest_ENG.md
+    - Using MEGAX: MEGAX_ENG.md
+    - Using BEAST: 1st_BEAST.md
+    - Phylodynamics using EBSP: BEAST+EBSP_ENG.md
+    - Using IQ-Tree: IQTree.md
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml

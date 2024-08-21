@@ -4,7 +4,7 @@ site_author: jpmslima
 site_description: Material for the Comparative Genomics module of the UChile Diplomado in Bioinformatics
 
 nav:
-  - Home: Presentation.md
+  - Home: index.md
   - About Us: aboutus.md
   - Diplomado - UChile: 
     - Slides: UC_slides.md
